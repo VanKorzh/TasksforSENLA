@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Задание 1</title>
+</head>
+<body>
+<p><input type="text" id="first" size="40" onkeydown="javascript: return ((event.keyCode>47)&&(event.keyCode<58)||(event.keyCode == 8))">
+<input type = "submit" value="Отправить" onclick="func()"></p>
+<div id="result"></div>
+<script>
+$(document).ready(function()
+{
+})
+function func()
+{
+    var textinput = document.getElementById('first').value;
+	var html = '';
+	if(textinput==0)
+	{
+	   html='';
+	   document.getElementById('result').innerHTML = html;
+	}
+	else
+	{
+	   for(var i=1;i<=textinput;i++)
+	   {
+	      html = html+i+' sheep...';
+	   }
+	      let elet = document.createElement("p");
+          elet.innerHTML = html;
+          document.body.appendChild(elet);
+	}
+}
+</script>
+</body>
+</html>

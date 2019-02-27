@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Задание 3</title>
+</head>
+<body>
+<p><input type="text" id="first" size="40">
+<input type="submit" value="Отправить" onclick="func()"></p>
+<div id="result"></div>
+<script>
+$(document).ready(function()
+{
+})
+function func()
+{
+var textinput = document.getElementById("first").value;
+var mass = textinput.split(' ');
+var count = 0;
+for(var i=0;i<mass.length;i++)
+{
+  if(mass[i]!='')
+  {
+     count++;
+  }
+}
+var arrmass = new Array(count);
+var masscount = 0;
+for(var i=0;i<mass.length;i++)
+{
+  if(mass[i]!='')
+  {
+     arrmass[masscount] = mass[i]
+	 masscount++;
+  }
+}
+var lengthofword = new Array(masscount);
+for(var i =0;i<masscount;i++)
+{
+   lengthofword[i] = arrmass[i].length;
+}lengthofword.sort(sortNumber);
+document.getElementById('result').innerHTML = 'The shortest length of word is '+ lengthofword[0];
+}
+function sortNumber(a,b) {
+        return a - b;
+    }
+</script>
+</body>
+
+</html>

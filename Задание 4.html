@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Задание 4</title>
+</head>
+<body>
+<script>
+var Array = ['0','1','2','3','4','5'];
+var length;
+function getDimensionalArray(Array,length)
+{
+   for(var i=0;i<Array.length;i++)
+   {
+   console.log(Array[i]);
+   }
+   length = 3;
+var subarray = [];
+for(var i=0;i<Math.ceil(Array.length/length);i++)
+{ 
+       subarray[i] = Array.slice((i*length), (i*length) + length);
+}
+   console.log(subarray);
+}
+var func = getDimensionalArray;
+getDimensionalArray(Array,length);
+</script>
+</body>
+</html>

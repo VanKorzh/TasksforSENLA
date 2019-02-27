@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Задание 6</title>
+</head>
+<body>
+<script>
+var stringmass = ['Create','a','frame'];
+var symbol;
+function frame(stringmass,symbol)
+{
+  symbol = prompt("Введите граничный символ");
+  var mass = new Array(stringmass.length);
+  for(var i=0;i<stringmass.length;i++)
+  {
+     mass[i] = stringmass[i].length;
+  }
+  mass.sort(sortNumber);
+  var length = mass[stringmass.length-1];
+  var symb = '';
+  for(var i=0;i<length;i++)
+  {
+    symb = symb + symbol;
+  }
+  var ns = '';
+  var newstr = new Array(stringmass.length);
+  for(var i=0;i<stringmass.length;i++)
+  {
+     for(var j=0;j<(length+1)-stringmass[i].length;j++)
+	 {
+	    ns = ns+' ';		
+	 }
+	 newstr[i] = ns;
+	 ns = '';
+  }
+  console.log(symbol+symb+symbol+symbol+symbol);
+  for(var i=0;i<stringmass.length;i++)
+  {
+	  console.log(symbol+' '+stringmass[i]+newstr[i]+symbol);
+  }
+  console.log(symbol+symb+symbol+symbol+symbol);
+}
+function sortNumber(a,b) {
+        return a - b;
+    }
+var f = frame;
+frame(stringmass,symbol);
+</script>
+</body>
+</html>

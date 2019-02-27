@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Задание 7</title>
+</head>
+<body>
+<script>
+function CreateHolder(a)
+ {
+ var a;
+ this.getValue=function(){ return a};
+ this.setValue=function(){ a = 2 };
+}
+var obj = new CreateHolder(5);
+console.log(obj.getValue());
+obj.setValue();
+console.log(obj.getValue());
+</script>
+</body>
+</html>

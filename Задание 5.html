@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Задание 5</title>
+</head>
+<body>
+<script>
+var myarray = ['1','2','3','4'];
+var number;
+function getLowerestIndex(myarray,number)
+{
+var n;
+   for(var i=0;i<myarray.length;i++)
+   {
+      console.log(myarray[i]);
+   }
+   number = prompt('Введите число: ');
+   for(var i=0;i<myarray.length-1;i++)
+   {
+      if(number>=myarray[i]&&number<=myarray[i+1])
+	  {
+	     n = i+1;
+	  }
+	  else if(number>=myarray[myarray.length-1])
+	  {
+	     n = myarray.length;
+	  }
+	  else if(number<=myarray[0])
+	  {
+	     n = 0;
+	  }
+   }
+   console.log('Наименьший индекс: '+n);
+}
+var func = getLowerestIndex;
+getLowerestIndex(myarray,number);
+</script>
+</body>
+</html>
